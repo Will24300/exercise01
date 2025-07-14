@@ -122,3 +122,50 @@ nav .navMenu li {
   font-weight: bold;
   cursor: pointer;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  /* padding: 0 10px; */
+}
+.grid-item {
+  background-color: rgb(67, 67, 213);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+.grid-item p {
+  margin: 0 15px 0 0;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+  line-height: 1.8;
+  font-weight: bold;
+}
+.grid-item p span {
+  font-weight: 500;
+}
+.grid-item img {
+  max-width: 50%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .grid-item {
+    flex-direction: column; /* Stack on mobile */
+  }
+  .grid-item p {
+    margin: 0 0 10px 0; /* Adjust margin for stacking */
+  }
+  .grid-item img {
+    max-width: 100%; /* Full width on mobile */
+  }
+}
